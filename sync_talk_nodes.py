@@ -2,7 +2,7 @@ import subprocess
 import os, sys
 
 cur_dir = os.path.dirname(__file__)
-sync_talk_dir = os.path.join(cur_dir, "repos/SyncTalk")
+sync_talk_dir = os.path.join(cur_dir, "repos", "SyncTalk")
 sys.path.append(sync_talk_dir)
 import numpy as np
 import torch
@@ -30,7 +30,7 @@ class LoadAve:
     def run(self):
         from .repos.SyncTalk.nerf_triplane.network import AudioEncoder
         model = AudioEncoder().to(device_type).eval()
-        ckpt = torch.load(os.path.join(os.path.dirname(__file__), 'repos/SyncTalk/nerf_triplane/checkpoints/audio_visual_encoder.pth'))
+        ckpt = torch.load(os.path.join(os.path.dirname(__file__), "repos","SyncTalk", "nerf_triplane", "checkpoints", "audio_visual_encoder.pth"))
         model.load_state_dict({f'audio_encoder.{k}': v for k, v in ckpt.items()})
         return (model, )
 

@@ -19,18 +19,19 @@ class InstallStatus:
 # Prepare directories.
 cur_dir = os.path.dirname(__file__)
 install_status_path = os.path.join(cur_dir, "install_status.json")
-sync_talk_dir = os.path.join(cur_dir, "repos/SyncTalk")
-pytorch3d_dir = os.path.join(cur_dir, "repos/pytorch3d")
-if not os.path.isdir(sync_talk_dir):
-    os.makedirs(sync_talk_dir)
-if not os.path.isdir(pytorch3d_dir):
-    os.makedirs(pytorch3d_dir)
+repos_dir = os.path.join(cur_dir, "repos")
+if not os.path.isdir(repos_dir):
+    os.makedirs(repos_dir)
+sync_talk_dir = os.path.join(repos_dir, "SyncTalk")
+pytorch3d_dir = os.path.join(repos_dir, "pytorch3d")
 
 install_status = utils.read_json_as_class(install_status_path, InstallStatus)
 
 # Clone forked SyncTalk repo.
 if not install_status.git_clone_sync_talk:
     utils.clone_repository('https://github.com/Ryuukeisyou/SyncTalk.git', sync_talk_dir)
+    if os.name == 'nt':
+        subprocess.check_call(["git", "restore", "--source=HEAD", ":/"], cwd=sync_talk_dir)
     install_status.git_clone_sync_talk = True
     utils.export_class_to_json(install_status, install_status_path)
 else:
@@ -42,8 +43,9 @@ else:
 if install_status.git_clone_sync_talk and not install_status.install_dependencies:
     
     # Install portaudio19-dev.
-    if not utils.is_package_installed("portaudio19-dev"):
-        subprocess.check_call(["sudo", "apt-get", "install", "portaudio19-dev"])
+    if os.name == 'posix':
+        if not utils.is_package_installed("portaudio19-dev"):
+            subprocess.check_call(["sudo", "apt-get", "install", "portaudio19-dev"])
     
     # Install requirements.txt
     sync_talk_requirements_path = os.path.join(sync_talk_dir, "requirements.txt")

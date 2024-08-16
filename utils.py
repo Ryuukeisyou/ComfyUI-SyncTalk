@@ -44,6 +44,8 @@ def install_requirements(requirements_path: str):
         required_packages = [s.replace("_", "-").lower() for s in f.read().splitlines()] 
         installed_packages = [pkg.key for pkg in pkg_resources.working_set]
         missing_packages = set(required_packages) - set(installed_packages)
+        if 'opencv-contrib-python' in installed_packages or 'opencv-python-headless' in installed_packages:
+            missing_packages = set(missing_packages) - set(['opencv-python'])
         if missing_packages:
             subprocess.check_call([sys.executable, "-m", "pip", "install", *missing_packages])
 
