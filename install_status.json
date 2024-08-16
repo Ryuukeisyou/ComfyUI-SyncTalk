@@ -1,4 +1,4 @@
 {
-    "git_clone_sync_talk": true,
-    "install_dependencies": true
+    "git_clone_sync_talk": false,
+    "install_dependencies": false
 }
