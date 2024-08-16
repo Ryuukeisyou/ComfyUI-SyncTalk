@@ -17,4 +17,4 @@ For quick start, please download training data and trained checkpoints from [Syn
 
 The following video contains the workflow to use in ComfyUI. Or you can use workflow.json in demo.
 
-<div><video controls src="https://github.com/Ryuukeisyou/ComfyUI-SyncTalk/raw/master/demo/demo.mp4" muted="false"></video></div>
+<div><video controls src="https://raw.githubusercontent.com/Ryuukeisyou/ComfyUI-SyncTalk/master/demo/demo.mp4" muted="false"></video></div>
