@@ -20,8 +20,8 @@ For quick start, please download training data and trained checkpoints from [Syn
 
 The following video contains a workflow to use in ComfyUI. Or you can use workflow.json in demo.
 
-This workflow contains nodes from [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite). You may need to install it in advance.
+https://github.com/user-attachments/assets/e017206d-1a68-4334-859f-9a74891d7de3
 
-https://raw.githubusercontent.com/Ryuukeisyou/ComfyUI-SyncTalk/master/demo/demo.mp4
+This workflow contains nodes from [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite). You may need to install it in advance.
 
 <img src="demo/demo_workflow.png">
