@@ -9,9 +9,11 @@ NOTE: This is a wip repository tested only on Ubuntu22.04 with python3.12.5, pyt
 # Installation
 Open "custom_nodes" folder and clone this repo.
 
-At first start, some requirements will be installed, and dependent repos ([pytorch3d](https://github.com/facebookresearch/pytorch3d/tree/main), a forked [SyncTalk](https://github.com/Ryuukeisyou/SyncTalk) for newer pytorch version) will be cloned to "custom_nodes/ComfyUI-SyncTalk/Repos/". 
+At first start, some requirements will be installed, and dependent repos ([pytorch3d](https://github.com/facebookresearch/pytorch3d), a forked [SyncTalk](https://github.com/Ryuukeisyou/SyncTalk) for newer pytorch version) will be cloned to "custom_nodes/ComfyUI-SyncTalk/Repos/". 
 
-Specially for pytorch3d and four extensions (freqencoder, gridencoder, raymarching, shencoder) in SyncTalk, since there are usually no built wheel, they will be build on the machine and then install, which might take many minutes.
+Specially for pytorch3d and four extensions (freqencoder, gridencoder, raymarching, shencoder) in SyncTalk, since there are usually no built wheel, they will be build on the machine and then install, which might take many minutes. 
+
+Pytorch3d may need some dependencies to compile, please refer to [pytorch3d's install guide](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) for more information.
 
 Build wheels and install them in advance is also a choice.
 
