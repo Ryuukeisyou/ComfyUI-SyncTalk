@@ -1,5 +1,5 @@
 # Introduction
-Currently this is only a minimal port of the inference functionalities of the original [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk), which uses NeRF based technology that creates a talking head with lip movements etc.
+Currently this is only a minimal port of the inference functionalities of the original [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk), which uses NeRF based technology that creates a talking head with synchronized lip movements etc.
 
 The custom nodes contain only wav process and inference functionalities. If you want to train your model, please see the guides in [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk).
 
@@ -20,7 +20,7 @@ For quick start, please download training data and trained checkpoints from [Syn
 
 The following video contains a workflow to use in ComfyUI. Or you can use workflow.json in demo.
 
-This workflow contains a node from [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite). You may need to install it in advance.
+This workflow contains nodes from [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite). You may need to install it in advance.
 
 https://raw.githubusercontent.com/Ryuukeisyou/ComfyUI-SyncTalk/master/demo/demo.mp4
 
