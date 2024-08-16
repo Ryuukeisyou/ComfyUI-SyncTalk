@@ -3,6 +3,8 @@ Currently this is only a minimal port of the inference functionalities of the or
 
 The custom nodes contain only wav process and inference functionalities. If you want to train your model, please see the guides in [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk).
 
+
+
 # Installation
 Open "custom_nodes" folder and clone this repo.
 
@@ -15,6 +17,10 @@ Build wheels and install them in advance is also a choice.
 # Workflow
 For quick start, please download training data and trained checkpoints from [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk) in advance, and put them in correct locations under "custom_nodes/ComfyUI-SyncTalk/repos/SyncTalk/".
 
-The following video contains the workflow to use in ComfyUI. Or you can use workflow.json in demo.
+The following video contains a workflow to use in ComfyUI. Or you can use workflow.json in demo.
+
+This workflow contains a node from [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite). You may need to install it in advance.
 
 https://raw.githubusercontent.com/Ryuukeisyou/ComfyUI-SyncTalk/master/demo/demo.mp4
+
+<img src="demo/demo_workflow.png">
