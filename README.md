@@ -3,7 +3,7 @@ Currently this is only a minimal port of the inference functionalities of the or
 
 The custom nodes contain only wav process and inference functionalities. If you want to train your model, please see the guides in [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk).
 
-NOTE: This is a wip repository tested only on Ubuntu22.04 with python12.5, pytorch2.4 and cuda12.4.
+NOTE: This is a wip repository tested only on Ubuntu22.04 with python3.12.5, pytorch2.4 and cuda12.4.
 
 
 # Installation
