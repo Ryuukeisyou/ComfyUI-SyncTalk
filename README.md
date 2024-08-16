@@ -15,4 +15,5 @@ Build wheels and install them in advance is also a choice.
 # Workflow
 For quick start, please download training data and trained checkpoints from [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk) in advance, and put them in correct locations under "custom_nodes/ComfyUI-SyncTalk/repos/SyncTalk/".
 
-// video and image to be uploaded.
+The following video contains the workflow to use in ComfyUI. Or you can use workflow.json in demo.
+https://github.com/Ryuukeisyou/ComfyUI-SyncTalk/raw/master/demo/demo.mp4
