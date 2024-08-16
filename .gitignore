@@ -1,0 +1,8 @@
+__pycache__/
+.idea/
+.vscode/
+repos/
+.tmp
+.cache
+*:Zone.Identifier
+install_status.json
