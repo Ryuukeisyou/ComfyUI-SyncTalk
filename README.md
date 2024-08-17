@@ -15,7 +15,7 @@ Specially for pytorch3d and four extensions (freqencoder, gridencoder, raymarchi
 
 Pytorch3d may need some dependencies to compile, please refer to [pytorch3d's install guide](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) for more information.
 
-Build wheels and install them in advance is also a choice.
+Build wheels and install them in advance is also a choice. I have also put some wheels built on my environment in the release.
 
 # Workflow
 For quick start, please download training data and trained checkpoints from [SyncTalk](https://github.com/ZiqiaoPeng/SyncTalk) in advance, and put them in correct locations under "custom_nodes/ComfyUI-SyncTalk/repos/SyncTalk/".
