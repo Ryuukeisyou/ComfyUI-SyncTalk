@@ -73,13 +73,14 @@ if install_status.git_clone_sync_talk and not install_status.install_dependencie
     if missing_exts:
         for ext in missing_exts:
             dirname = "raymarching" if ext == "raymarching-face" else ext
+            ext_name = "raymarching_face" if ext == "raymarching-face" else ext
             ext_dir = os.path.join(sync_talk_dir, dirname)
-            ext_wheel = utils.get_valid_wheel(ext, os.path.join(ext_dir, "dist"))
+            ext_wheel = utils.get_valid_wheel(ext_name, os.path.join(ext_dir, "dist"))
             if ext_wheel is None:
                 # Build wheel.
                 ext_setup_path = os.path.join(ext_dir, "setup.py")
                 subprocess.check_call([sys.executable, ext_setup_path, "bdist_wheel"], cwd=ext_dir)
-                ext_wheel = utils.get_valid_wheel(ext, os.path.join(ext_dir, "dist"))
+                ext_wheel = utils.get_valid_wheel(ext_name, os.path.join(ext_dir, "dist"))
             if ext_wheel is not None:
                 subprocess.check_call([sys.executable, "-m", "pip", "install", ext_wheel])
     
